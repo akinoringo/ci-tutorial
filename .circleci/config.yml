@@ -54,7 +54,7 @@ jobs:
       - image: circleci/php7.3-node-browsers
     steps:
       - add_ssh_keys
-      - run
+      - run:
           name: deploy
           command: |
             ssh -o StrictHostKeyChecking=no -t webapp@${HOST_NAME} "cd laravel-ci && \
